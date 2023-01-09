@@ -1,7 +1,22 @@
+function solicitarUsuarioYEdad () {
+    let usuario = prompt("Ingrese su nombre:");
+    let edad = parseInt(prompt("Ingrese su edad:"));
+
+    if (edad >= 18) {
+        alert("Bienvenido/a " + usuario);
+    } 
+    while (edad < 18) {
+        alert("Acceso denegado. Usted es menor de edad")
+        usuario = prompt("Ingrese su nombre:");
+        edad = parseInt(prompt("Ingrese su edad:"));
+    }
+    
+}
+
 function calcularPrecioFinalEnCuotas () {
     while (resultadoPrecioFinal !== "NO" && resultadoPrecioFinal !== "No" && resultadoPrecioFinal !== "no" ) {
 
-        const montoDelProducto = parseFloat(prompt("Bienvenido/a " + usuario + ". Ingrese el monto del producto seleccionado:"));
+        const montoDelProducto = parseFloat(prompt("Por favor ingrese el monto del producto seleccionado:"));
         let cuotas = prompt("Ingrese el número de cuotas (3, 6, 12 cuotas)");
     
         while (cuotas !== "3" && cuotas !== "6" && cuotas !== "12") {
@@ -31,17 +46,13 @@ function calcularPrecioFinalEnCuotas () {
     }
 }
 
-const usuario = prompt("Ingrese su nombre:");
-const edad = parseInt(prompt("Ingrese su edad:"));
+let usuario = "";
+let edad = "";
 let resultadoPrecioFinal = "";
 let subtotal = "";
 
-if (edad >= 18) {
-    calcularPrecioFinalEnCuotas ();
-} else {
-    alert("Acceso denegado. Usted es menor de edad.");
-}
-
+solicitarUsuarioYEdad ();
+calcularPrecioFinalEnCuotas ()
 
 
 
