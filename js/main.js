@@ -1,8 +1,9 @@
 // SIMULADOR PLAZO FIJO
+// Clase
 class Cliente {
-    constructor(nombre, dni) {
-        this.nombre = nombre;
+    constructor(dni, nombre) {
         this.dni = dni;
+        this.nombre = nombre;
     }
 }
 
@@ -29,61 +30,76 @@ const clienteExiste = (dni) => {
     return encontrado;
 }
 
-const solicitarDniUsuario = () => {
-    let dni = prompt("Por favor ingrese DNI del cliente");
-
-    while (!clienteExiste(dni)) {
-        dni = prompt("Acceso denegado. DNI incorrecto. Ingrese correctamente el DNI");
-    }
+const login = () => {
+    let dni = document.getElementById("dniCliente").value;
     
-    const indiceCliente = obtenerIndiceDeClientePorDni(dni);
-    alert("Bienvenido/a " + clientes[indiceCliente].nombre);
+    if (!clienteExiste(dni)) {
+        messageDni.innerHTML = ("Cliente inexistente. Ingrese correctamente sus datos");
+    } else {
+        window.location = "plazo-fijo.html";
+        const indiceCliente = obtenerIndiceDeClientePorDni(dni);
+        messageDni.innerHTML = ("Bienvenido/a " + clientes[indiceCliente].nombre);
+    }
+}
+
+const registerNewUser = () => {
+    let newUserDni = document.getElementById("dniNuevoUsuario").value;
+    let newUserName = document.getElementById("nombreNuevoUsuario").value;
+    
+    dniNewUser = clientes.push(new Cliente((newUserDni),(newUserName)));
+    saveNewUser();
+}
+
+const saveNewUser = () => {
+    localStorage.setItem("newUser", JSON.stringify(clientes));
+}
+
+const usersLS = () => {
+    let clientes = [];
+    const clientesLS = localStorage.getItem("newUser");
+
+    if(clientesLS !== null) {
+        clientes = JSON.parse(clientesLS);
+    }
+    return clientes;
 }
 
 const calcularPlazoFijo = (porcentaje, anual, mesesDelPlazoFijo) => {
     return (monto) => ((monto * porcentaje) / 100) / anual * mesesDelPlazoFijo;
 }
 
-// // INICIA PROGRAMA
-alert("SIMULADOR DE PLAZO FIJO")
+// H2 AGREGADO POR DOM
+let title = document.createElement("h2");
+title.classList.add("title");
+title.innerHTML = "<h2>CoderBANK</h2>";
+contenido.insertAdjacentElement("afterbegin", title)
+title.before(title);
 
-const clientes = [
-    new Cliente("Luciano", "111222333"),
-    new Cliente("Fiamma", "222333444"),
-    new Cliente("Anakin", "333444555"),
-];
 
-solicitarDniUsuario();
-
+// INICIA PROGRAMA
+const clientes = usersLS ();
 const plazoFijoUnMes = calcularPlazoFijo(70, 12, 1);
 const plazoFijoTresMeses = calcularPlazoFijo(76, 12, 3);
 const plazoFijoDoceMeses = calcularPlazoFijo(85, 12, 12);
 
-let monto = parseInt(prompt("Ingrese el monto que desea invertir en Plazo Fijo:"));
-let simulador = prompt("Elija el plazo estimado: 1- UN MES (70% anual) | 2- TRES MESES (76% anual) | 3- DOCE MESES (85% anual) | 4- Salir");
+function invertir () {
+    let monto = Number(document.getElementById("capital").value);
+    let datos = document.getElementById("datos");
 
-while (simulador !== "Salir" && simulador !== "salir" && simulador !== "SALIR" && simulador !== "4") {
-    switch (simulador) {
-        case "1":
-            plazoFijoUnMes();
-            alert("Por su inversión de $" + monto + " usted recibirá en un mes la suma de $" + (plazoFijoUnMes(monto) + monto));
-            break;
-
-        case "2":
-            plazoFijoTresMeses();
-            alert("Por su inversión de $" + monto + " usted recibirá en tres meses la suma de $" + (plazoFijoTresMeses(monto) + monto));
-            break;
-
-        case "3":
-            plazoFijoDoceMeses();
-            alert("Por su inversión de $" + monto + " usted recibirá en doce meses la suma de $" + (plazoFijoDoceMeses(monto) + monto));
-            break;
-
-        default:
-            alert("Opción incorrecta");
-            break;
+    if (document.getElementById("unMes").checked){
+        plazoFijoUnMes();
+        datos.innerHTML = ("Por su inversión de $" + monto + " usted recibirá en un mes la suma de $" + (plazoFijoUnMes(monto) + monto).toFixed(2));
+    } 
+    else if (document.getElementById("tresMeses").checked){
+        plazoFijoTresMeses();
+        datos.innerHTML = ("Por su inversión de $" + monto + " usted recibirá en tres meses la suma de $" + (plazoFijoTresMeses(monto) + monto).toFixed(2));
     }
-
-    simulador = prompt("Elija el plazo estimado: 1- UN MES (70% anual) | 2- TRES MESES (76% anual) | 3- DOCE MESES (85% anual) | 4- Salir");
+    else if (document.getElementById("doceMeses").checked){
+        plazoFijoDoceMeses();
+        datos.innerHTML = ("Por su inversión de $" + monto + " usted recibirá en doce meses la suma de $" + (plazoFijoDoceMeses(monto) + monto).toFixed(2));
+    }
+    else{
+        datos.innerHTML=("Seleccione el tiempo deseado del Plazo Fijo");
+    }
 }
-alert("Gracias por utilizar nuestros servicios");
+

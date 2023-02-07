@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
 </head>
-<body>
-    <h1>Curso JavaScript</h1>
-    <h3>Alumno: Luciano Gaston Lopez</h3>
-    <h2>Segunda Pre Entrega: Simulador de plazo fijo</h2>
-    <h4>CLIENTES DEL SIMULADOR:</h4>
-    <ul>
-        <li>Luciano. DNI: 111222333</li>
-        <li>Fiamma. DNI: 222333444</li>
-        <li>Anakin: DNI: 333444555</li>
-    </ul>
-    
+<body id="contenido">
+            <!-- Formulario de ingreso -->
+            <form class="formularioIngreso">
+                <h2>INICIAR SESIÓN</h2>
+                USUARIO<input type="text" name="usuarioCliente" id="usuarioCliente" placeholder="Ingrese nombre de usuario">
+                <br>
+                DNI <input type="text" name="dniCliente" id="dniCliente" placeholder="Ingrese número de dni">  
+                <p id="messageDni"></p>
+                <input type="button" id="button" value="Ingresar" onclick="login()">
+            </form>
+            <!-- Formulario de registro de nuevos usuarios -->
+            <form class="formularioRegistro">
+                <br><br>
+                <h2>REGISTRO DE USUARIO</h2>
+                Nombre de Usuario <input type="text" name="nombreNuevoUsuario" id="nombreNuevoUsuario" placeholder="Ingrese su nombre de usuario por favor">  
+                <br><br>
+                Número de DNI <input type="text" name="dniNuevoUsuario" id="dniNuevoUsuario" placeholder="Ingrese su DNI por favor">  
+                <br>
+                <input type="button" id="button" value="Registrar Usuario" onclick="registerNewUser()">
+            </form>
     <script src="./js/main.js"></script>
 </body>
 </html>

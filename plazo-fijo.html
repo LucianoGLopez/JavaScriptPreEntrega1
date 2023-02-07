@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body id="contenido">
+            <h1>Invertir en Plazo Fijo</h1>
+            <form class="formulario">
+                <input type="radio" name="plazoFijo" id="unMes"> PLAZO FIJO UN MES (70% Anual)
+                <input type="radio" name="plazoFijo" id="tresMeses"> PLAZO FIJO TRES MESES (76% Anual)
+                <input type="radio" name="plazoFijo" id="doceMeses"> PLAZO FIJO DOCE MESES (85% Anual)
+                <p>Ingrese capital a invertir:</p>
+                <input type="number" id="capital">
+                <input type="button" id="button" value="Invertir" onclick="invertir()">
+            </form>
+                <p id="datos"></p>
+                <p id="bienvenido"></p>
+    <script src="./js/main.js"></script>
+</body>
+</html>
