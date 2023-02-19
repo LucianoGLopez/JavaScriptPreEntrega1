@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>JavaScript</title>
 </head>
 <body id="contenido">
+            <h1>CoderBank</h1>
             <!-- Formulario de ingreso -->
-            <form class="formularioIngreso">
-                <h2>INICIAR SESIÓN</h2>
-                USUARIO<input type="text" name="usuarioCliente" id="usuarioCliente" placeholder="Ingrese nombre de usuario">
-                <br>
-                DNI <input type="text" name="dniCliente" id="dniCliente" placeholder="Ingrese número de dni">  
-                <p id="messageDni"></p>
-                <input type="button" id="button" value="Ingresar" onclick="login()">
-            </form>
+            <div class="form-contain">
+                <form class="formularioIngreso">
+                    <h2>INICIAR SESIÓN</h2>
+                        <input type="text" name="usuarioCliente" id="usuarioCliente" placeholder="Ingrese nombre de usuario">
+                        <input number="number" name="dniCliente" id="dniCliente" placeholder="Ingrese número de dni">  
+                        <input type= "password" name="passwordCliente" id="passwordCliente" placeholder="Ingrese su contraseña">
+                        <input id="formButtonIngreso" type="button" id="button" value="Ingresar" onclick="login()">
+                </form>
+            
             <!-- Formulario de registro de nuevos usuarios -->
             <form class="formularioRegistro">
-                <br><br>
-                <h2>REGISTRO DE USUARIO</h2>
-                Nombre de Usuario <input type="text" name="nombreNuevoUsuario" id="nombreNuevoUsuario" placeholder="Ingrese su nombre de usuario por favor">  
-                <br><br>
-                Número de DNI <input type="text" name="dniNuevoUsuario" id="dniNuevoUsuario" placeholder="Ingrese su DNI por favor">  
-                <br>
-                <input type="button" id="button" value="Registrar Usuario" onclick="registerNewUser()">
+                <h2>REGISTRO</h2>
+                    <input type="text" name="nombreNuevoUsuario" id="nombreNuevoUsuario" placeholder="Ingrese nombre de usuario">  
+                    <input type="number" name="dniNuevoUsuario" id="dniNuevoUsuario" placeholder="Ingrese número de dni">
+                    <input type= "password" name="passwordNuevoUsuario" id="passwordNuevoUsuario" placeholder="Ingrese su contraseña">
+                    <input id="formButtonRegistro" type="button" id="button" value="Registrar Usuario" onclick="registerNewUser()">
             </form>
+        </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
+
+
+

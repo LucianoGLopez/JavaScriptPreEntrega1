@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul li {
+  list-style: none; }
+
+#contenido {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/backgound-login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
+  #contenido h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 3rem;
+    color: #131212; }
+
+.form-contain {
+  display: flex;
+  justify-content: space-around; }
+
+.formularioIngreso, .formularioRegistro {
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: auto;
+  background-color: #2a5425c9;
+  height: 400px;
+  width: 350px;
+  margin: 100px;
+  text-align: center;
+  border-radius: 8px; }
+  .formularioIngreso h2, .formularioRegistro h2 {
+    padding-top: 50px;
+    color: #131212; }
+  .formularioIngreso input, .formularioRegistro input {
+    background-color: #2a542500;
+    font-size: 1rem;
+    padding: .8em 1em;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #002500; }
+    .formularioIngreso input::placeholder, .formularioRegistro input::placeholder {
+      color: #f2f2f2; }
+
+#formButtonIngreso,
+#formButtonRegistro {
+  background-color: #f2f2f2db;
+  color: #0e350c;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 20px;
+  height: 3rem;
+  width: auto; }
+  #formButtonIngreso:hover,
+  #formButtonRegistro:hover {
+    background-color: #13121269;
+    color: #f2f2f2; }
+
+#contenido-plazofijo {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/background-plazofijo.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: start;
+  background-color: #0e350c8a;
+  height: 400px;
+  width: 350px;
+  padding: 25px;
+  margin-top: 150px;
+  border-radius: 8px; }
+  .formulario h1 {
+    text-align: center;
+    padding-bottom: 15px; }
+
+.form-capital {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none; }
+
+.form-button {
+  background-color: #f2f2f2db;
+  color: #0e350c;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px; }
+  .form-button:hover {
+    background-color: #13121269;
+    color: #f2f2f2; }
+
+.valor-dolar {
+  background-color: #0e350c8a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  background-color: #0e350c8a;
+  height: 400px;
+  width: 350px;
+  padding: 25px;
+  margin-top: 150px;
+  border-radius: 8px;
+  font-size: 1.8rem; }
