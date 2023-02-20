@@ -1,12 +1,11 @@
 #contenido-plazofijo{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/background-plazofijo.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/background-plazofijo.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
 }
 
 .formulario{
@@ -15,15 +14,18 @@
     justify-content: center;
     gap: 20px;
     text-align: start;
-    background-color: #0e350c8a;
+    background-color: #fcfcfc8d;
     height: 400px;
     width: 350px;
     padding: 25px;
     margin-top: 150px;
     border-radius: 8px;
+    border: solid 1px $secondary;
+    color: $greenlight;
     h1{
         text-align: center;
         padding-bottom: 15px;
+        color: $secondary;
     }
 }
 
@@ -50,19 +52,24 @@
 }
 
 .valor-dolar{
-    background-color: #0e350c8a;
+    background-color: #6eb8678d;
+    backdrop-filter: blur(1px);
+    color: $secondary;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
     text-align: center;
-    background-color: #0e350c8a;
     height: 400px;
     width: 350px;
     padding: 25px;
     margin-top: 150px;
     border-radius: 8px;
+    border: 1px solid $secondary;
     font-size: 1.8rem;
+    h3{
+        color: $secondary;
+    }
 }
 
 

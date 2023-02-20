@@ -7,15 +7,18 @@ ul li {
   list-style: none; }
 
 #contenido {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/backgound-login.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/backgound-login.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   #contenido h1 {
-    text-align: center;
-    padding-top: 50px;
+    padding: 1rem;
     font-size: 3rem;
-    color: #131212; }
+    color: #0e350c; }
+  #contenido h2 {
+    color: #0e350c;
+    font: 2.5rem;
+    padding-left: 1rem; }
 
 .form-contain {
   display: flex;
@@ -25,15 +28,24 @@ ul li {
   display: grid;
   gap: 1em;
   grid-auto-columns: auto;
-  background-color: #2a5425c9;
+  background-color: rgba(39, 94, 33, 0.689);
+  backdrop-filter: blur(5px);
   height: 400px;
   width: 350px;
   margin: 100px;
   text-align: center;
   border-radius: 8px; }
   .formularioIngreso h2, .formularioRegistro h2 {
-    padding-top: 50px;
-    color: #131212; }
+    align-self: center;
+    text-align: start;
+    margin-top: 30px;
+    padding: 10px;
+    color: #002500;
+    background-color: #f2f2f2bd;
+    border-top-right-radius: 50px;
+    border: 1px solid #2a5425;
+    border-left: none;
+    margin-right: 120px; }
   .formularioIngreso input, .formularioRegistro input {
     background-color: #2a542500;
     font-size: 1rem;
@@ -42,11 +54,12 @@ ul li {
     outline: none;
     border-bottom: solid 1px #002500; }
     .formularioIngreso input::placeholder, .formularioRegistro input::placeholder {
-      color: #f2f2f2; }
+      color: #f2f2f2;
+      font-size: small; }
 
 #formButtonIngreso,
 #formButtonRegistro {
-  background-color: #f2f2f2db;
+  background-color: #f2f2f2bd;
   color: #0e350c;
   cursor: pointer;
   font-weight: bold;
@@ -60,7 +73,7 @@ ul li {
     color: #f2f2f2; }
 
 #contenido-plazofijo {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/background-plazofijo.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/background-plazofijo.webp);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -74,15 +87,18 @@ ul li {
   justify-content: center;
   gap: 20px;
   text-align: start;
-  background-color: #0e350c8a;
+  background-color: #fcfcfc8d;
   height: 400px;
   width: 350px;
   padding: 25px;
   margin-top: 150px;
-  border-radius: 8px; }
+  border-radius: 8px;
+  border: solid 1px #0e350c;
+  color: #2a5425; }
   .formulario h1 {
     text-align: center;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    color: #0e350c; }
 
 .form-capital {
   padding: 10px;
@@ -103,16 +119,20 @@ ul li {
     color: #f2f2f2; }
 
 .valor-dolar {
-  background-color: #0e350c8a;
+  background-color: #6eb8678d;
+  backdrop-filter: blur(1px);
+  color: #0e350c;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   text-align: center;
-  background-color: #0e350c8a;
   height: 400px;
   width: 350px;
   padding: 25px;
   margin-top: 150px;
   border-radius: 8px;
+  border: 1px solid #0e350c;
   font-size: 1.8rem; }
+  .valor-dolar h3 {
+    color: #0e350c; }

@@ -9,20 +9,20 @@
 </head>
 <body id="contenido">
             <h1>CoderBank</h1>
+            <h2>Portal de inversiones</h2>
             <!-- Formulario de ingreso -->
             <div class="form-contain">
                 <form class="formularioIngreso">
                     <h2>INICIAR SESIÓN</h2>
-                        <input type="text" name="usuarioCliente" id="usuarioCliente" placeholder="Ingrese nombre de usuario">
-                        <input number="number" name="dniCliente" id="dniCliente" placeholder="Ingrese número de dni">  
+                        <input type="text" name="usuarioCliente" id="usuarioCliente" placeholder="Ingrese nombre de usuario" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                        <input type="number" name="dniCliente" id="dniCliente" placeholder="Ingrese número de dni">  
                         <input type= "password" name="passwordCliente" id="passwordCliente" placeholder="Ingrese su contraseña">
                         <input id="formButtonIngreso" type="button" id="button" value="Ingresar" onclick="login()">
                 </form>
-            
             <!-- Formulario de registro de nuevos usuarios -->
             <form class="formularioRegistro">
                 <h2>REGISTRO</h2>
-                    <input type="text" name="nombreNuevoUsuario" id="nombreNuevoUsuario" placeholder="Ingrese nombre de usuario">  
+                    <input type="text" name="nombreNuevoUsuario" id="nombreNuevoUsuario" placeholder="Ingrese nombre de usuario" onkeyup="javascript:this.value=this.value.toUpperCase();">  
                     <input type="number" name="dniNuevoUsuario" id="dniNuevoUsuario" placeholder="Ingrese número de dni">
                     <input type= "password" name="passwordNuevoUsuario" id="passwordNuevoUsuario" placeholder="Ingrese su contraseña">
                     <input id="formButtonRegistro" type="button" id="button" value="Registrar Usuario" onclick="registerNewUser()">

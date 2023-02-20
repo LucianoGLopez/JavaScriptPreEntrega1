@@ -9,32 +9,28 @@
     <title>JavaScript</title>
 </head>
 <body id="contenido-plazofijo">
-            
-            <form class="formulario">
-                <h1>Plazo Fijo</h1>
-                <div>
-                    <input type= "radio" name="plazoFijo" id="unMes">
-                    <label for="unMes">PLAZO FIJO UN MES (70% Anual)</label>
-                </div>
-                <div class="tresMeses">
-                    <input type="radio" name="plazoFijo" id="tresMeses">
-                    <label for="tresMeses">PLAZO FIJO TRES MESES (76% Anual)</label>
-                </div>
-                <div>
-                    <input type="radio" name="plazoFijo" id="doceMeses"> 
-                    <label for="doceMeses">PLAZO FIJO DOCE MESES (85% Anual) </label>
-                </div>
-
-                <h3>Ingrese el capital que desea invertir:</h3>
-                <input class="form-capital" type="number" id="capital" placeholder="Ejemplo: 1000">
-                <input class="form-button" type="button" id="button" value="Invertir" onclick="invertir()">
-            </form>
-
+    <form class="formulario">
+        <h1>Plazo Fijo</h1>
+            <div>
+                <input type= "radio" name="plazoFijo" id="unMes">
+                <label for="unMes">PLAZO FIJO UN MES (70% Anual)</label>
+            </div>
+            <div class="tresMeses">
+                <input type="radio" name="plazoFijo" id="tresMeses">
+                <label for="tresMeses">PLAZO FIJO TRES MESES (76% Anual)</label>
+            </div>
+            <div>
+                <input type="radio" name="plazoFijo" id="doceMeses"> 
+                <label for="doceMeses">PLAZO FIJO DOCE MESES (85% Anual) </label>
+            </div>
+            <h3>Ingrese el capital que desea invertir:</h3>
+            <input class="form-capital" type="number" id="capital" placeholder="Ejemplo: 1000">
+            <input class="form-button" type="button" id="button" value="Invertir" onclick="invertir()">
+    </form>
                 <!-- API valor dolar -->
             <div id="contenedor" class="valor-dolar">
                 <!-- Completo con JS -->
             </div>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

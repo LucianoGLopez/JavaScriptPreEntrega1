@@ -9,15 +9,19 @@ ul li{
 }
 
 #contenido{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/backgound-login.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./img/backgound-login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     h1{
-        text-align: center;
-        padding-top: 50px;
+        padding: 1rem;
         font-size: 3rem;
-        color: $black;
+        color: $secondary;
+    }
+    h2{
+        color: $secondary;
+        font: 2.5rem;
+        padding-left: 1rem;
     }
 }
 
@@ -30,15 +34,24 @@ ul li{
     display: grid;
     gap: 1em;
     grid-auto-columns: auto;
-    background-color: #2a5425c9;
+    background-color: rgba(39, 94, 33, 0.689);
+    backdrop-filter: blur(5px);
     height: 400px;
     width: 350px;
     margin: 100px;
     text-align: center;
     border-radius: 8px;
     h2{
-        padding-top: 50px;
-        color: $black;
+        align-self: center;
+        text-align: start;
+        margin-top: 30px;
+        padding: 10px;
+        color: $primary;
+        background-color: #f2f2f2bd;
+        border-top-right-radius: 50px;
+        border: 1px solid $greenlight;
+        border-left: none;
+        margin-right: 120px;
     }
     input{
         background-color: #2a542500;
@@ -49,13 +62,14 @@ ul li{
         border-bottom: solid 1px $primary;
         &::placeholder{
                     color: $light;
+                    font-size: small;
             }
     }
 }
 
 #formButtonIngreso, 
 #formButtonRegistro{
-    background-color: #f2f2f2db;
+    background-color: #f2f2f2bd;
     color: $secondary;
     cursor: pointer;
     font-weight: bold;
