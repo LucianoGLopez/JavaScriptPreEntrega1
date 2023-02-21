@@ -7,14 +7,14 @@ ul li {
   list-style: none; }
 
 #contenido {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/backgound-login.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-login.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   #contenido h1 {
     padding: 1rem;
     font-size: 3rem;
-    color: #0e350c; }
+    color: #2a5425; }
   #contenido h2 {
     color: #0e350c;
     font: 2.5rem;
@@ -73,7 +73,7 @@ ul li {
     color: #f2f2f2; }
 
 #contenido-plazofijo {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(./img/background-plazofijo.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bg-plazofijo.webp);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
