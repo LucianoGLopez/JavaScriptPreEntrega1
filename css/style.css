@@ -7,18 +7,21 @@ ul li {
   list-style: none; }
 
 #contenido {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-login.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../img/bg-login.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   #contenido h1 {
     padding: 1rem;
     font-size: 3rem;
-    color: #2a5425; }
+    color: #2a5425;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
   #contenido h2 {
     color: #0e350c;
     font: 2.5rem;
-    padding-left: 1rem; }
+    color: #2a5425;
+    padding-left: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
 
 .form-contain {
   display: flex;
@@ -73,10 +76,15 @@ ul li {
     color: #f2f2f2; }
 
 #contenido-plazofijo {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bg-plazofijo.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-plazofijo.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100vh; }
+
+.previous-arrow {
+  padding: 1rem; }
+
+.form-contain {
   display: flex;
   flex-direction: row;
   justify-content: space-around; }
@@ -91,14 +99,14 @@ ul li {
   height: 400px;
   width: 350px;
   padding: 25px;
-  margin-top: 150px;
+  margin-top: 50px;
   border-radius: 8px;
   border: solid 1px #0e350c;
-  color: #2a5425; }
+  color: #0e350c; }
   .formulario h1 {
     text-align: center;
     padding-bottom: 15px;
-    color: #0e350c; }
+    color: #2a5425; }
 
 .form-capital {
   padding: 10px;
@@ -111,16 +119,16 @@ ul li {
   color: #0e350c;
   cursor: pointer;
   font-weight: bold;
-  border: none;
+  border: 1px solid #2a5425;
   border-radius: 8px;
   padding: 10px; }
   .form-button:hover {
-    background-color: #13121269;
+    background-color: #131212a7;
     color: #f2f2f2; }
 
 .valor-dolar {
-  background-color: #6eb8678d;
-  backdrop-filter: blur(1px);
+  background-color: #6eb86762;
+  backdrop-filter: blur(3px);
   color: #0e350c;
   display: flex;
   flex-direction: column;
@@ -130,7 +138,7 @@ ul li {
   height: 400px;
   width: 350px;
   padding: 25px;
-  margin-top: 150px;
+  margin-top: 50px;
   border-radius: 8px;
   border: 1px solid #0e350c;
   font-size: 1.8rem; }

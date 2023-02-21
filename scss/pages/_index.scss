@@ -9,7 +9,7 @@ ul li{
 }
 
 #contenido{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-login.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../img/bg-login.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -17,11 +17,14 @@ ul li{
         padding: 1rem;
         font-size: 3rem;
         color: $greenlight;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     h2{
         color: $secondary;
         font: 2.5rem;
+        color: $greenlight;
         padding-left: 1rem;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 }
 

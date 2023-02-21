@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-
     <title>JavaScript</title>
 </head>
 <body id="contenido-plazofijo">
-    <form class="formulario">
+    <div class="previous-arrow">
+        <a href="./index.html">
+            <img src="/img/icons8-flecha-izquierda-larga-100.png" alt="previous">
+        </a>
+    </div>
+    <div class="form-contain">
+        <form class="formulario">
         <h1>Plazo Fijo</h1>
             <div>
                 <input type= "radio" name="plazoFijo" id="unMes">
@@ -26,11 +31,12 @@
             <h3>Ingrese el capital que desea invertir:</h3>
             <input class="form-capital" type="number" id="capital" placeholder="Ejemplo: 1000">
             <input class="form-button" type="button" id="button" value="Invertir" onclick="invertir()">
-    </form>
+        </form>
                 <!-- API valor dolar -->
             <div id="contenedor" class="valor-dolar">
                 <!-- Completo con JS -->
             </div>
+        </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

@@ -1,8 +1,15 @@
 #contenido-plazofijo{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bg-plazofijo.webp);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-plazofijo.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+.previous-arrow{
+    padding: 1rem;
+}
+
+.form-contain{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -18,14 +25,14 @@
     height: 400px;
     width: 350px;
     padding: 25px;
-    margin-top: 150px;
+    margin-top: 50px;
     border-radius: 8px;
     border: solid 1px $secondary;
-    color: $greenlight;
+    color: $secondary;
     h1{
         text-align: center;
         padding-bottom: 15px;
-        color: $secondary;
+        color: $greenlight;
     }
 }
 
@@ -41,19 +48,18 @@
     color: $secondary;
     cursor: pointer;
     font-weight: bold;
-    border: none;
+    border: 1px solid $greenlight;
     border-radius: 8px;
-    
     padding: 10px;
     &:hover{
-        background-color: #13121269;
+        background-color: #131212a7;
         color: $light;
     }
 }
 
 .valor-dolar{
-    background-color: #6eb8678d;
-    backdrop-filter: blur(1px);
+    background-color: #6eb86762;
+    backdrop-filter: blur(3px);
     color: $secondary;
     display: flex;
     flex-direction: column;
@@ -63,7 +69,7 @@
     height: 400px;
     width: 350px;
     padding: 25px;
-    margin-top: 150px;
+    margin-top: 50px;
     border-radius: 8px;
     border: 1px solid $secondary;
     font-size: 1.8rem;
@@ -71,13 +77,3 @@
         color: $secondary;
     }
 }
-
-
-
-
-
-
-
-
-
-

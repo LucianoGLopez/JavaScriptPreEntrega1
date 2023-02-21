@@ -9,10 +9,10 @@ class Cliente {
 }
 
 //Funciones
-const obtenerIndiceDeClientePorPassword = (password) => {
+const obtenerIndiceDeClientePorDni = (dni) => {
     let indiceCliente = 0;
     for (let i = 0; i < clientes.length; i++) {
-        if (clientes[i].password === password) {
+        if (clientes[i].dni === dni) {
             indiceCliente = i;
             break;
         }
@@ -53,16 +53,15 @@ const clienteExisteNombre = (nombre) => {
     return encontrado;
 }
 
-
 const login = () => {
     let password = document.getElementById("passwordCliente").value;
     let dni = document.getElementById("dniCliente").value;
     let nombre = document.getElementById("usuarioCliente").value;
 
-    if (!clienteExisteDni(dni) || (!clienteExistePassword(password)) || (!clienteExisteNombre(nombre))) {
+    if ((!clienteExisteDni(dni)) || (!clienteExistePassword(password)) || (!clienteExisteNombre(nombre))) {
         swal("Usuario o contraseña incorrectos. ", "Intente nuevamente.", "error");
     } else {
-        const indiceCliente = obtenerIndiceDeClientePorPassword(password);
+        const indiceCliente = obtenerIndiceDeClientePorDni(dni);
         swal({
             title: "Bienvenido/a " + clientes[indiceCliente].nombre,
             icon: "success",
@@ -81,7 +80,6 @@ const registerNewUser = () => {
     let newUserPassword = document.getElementById("passwordNuevoUsuario").value;
 
     dniNewUser = clientes.push(new Cliente((newUserDni), (newUserName), (newUserPassword)));
-
     saveNewUser();
     swal("Registro exitoso. ", "Bienvenido/a " + newUserName, "success");
 }
@@ -105,16 +103,16 @@ const calcularPlazoFijo = (porcentaje, anual, mesesDelPlazoFijo) => {
 }
 
 // INICIA PROGRAMA
-const clientes = usersLS();
+const clientes = usersLS ();
 const plazoFijoUnMes = calcularPlazoFijo(70, 12, 1);
 const plazoFijoTresMeses = calcularPlazoFijo(76, 12, 3);
 const plazoFijoDoceMeses = calcularPlazoFijo(85, 12, 12);
 
-function invertir() {
+function invertir () {
     let monto = Number(document.getElementById("capital").value);
 
     if (document.getElementById("unMes").checked) {
-        plazoFijoUnMes();
+        plazoFijoUnMes ();
         swal({
             title: "Plazo fijo un mes",
             text: "Por su inversión de $" + monto + " usted recibirá en un mes la suma de $" + (plazoFijoUnMes(monto) + monto).toFixed(2),
@@ -123,7 +121,7 @@ function invertir() {
         })
     }
     else if (document.getElementById("tresMeses").checked) {
-        plazoFijoTresMeses();
+        plazoFijoTresMeses ();
         swal({
             title: "Plazo fijo tres meses",
             text: "Por su inversión de $" + monto + " usted recibirá en tres meses la suma de $" + (plazoFijoTresMeses(monto) + monto).toFixed(2),
@@ -132,7 +130,7 @@ function invertir() {
         })
     }
     else if (document.getElementById("doceMeses").checked) {
-        plazoFijoDoceMeses();
+        plazoFijoDoceMeses ();
         swal({
             title: "Plazo fijo doce meses",
             text: "Por su inversión de $" + monto + " usted recibirá en doce meses la suma de $" + (plazoFijoDoceMeses(monto) + monto).toFixed(2),
