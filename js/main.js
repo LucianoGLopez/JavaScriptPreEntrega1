@@ -109,16 +109,11 @@ const plazoFijoUnMes = calcularPlazoFijo(70, 12, 1);
 const plazoFijoTresMeses = calcularPlazoFijo(76, 12, 3);
 const plazoFijoDoceMeses = calcularPlazoFijo(85, 12, 12);
 
-// Agrego evento "click" formularios login y register
-const buttonLogin = document.getElementById("formButtonIngreso");
-buttonLogin.addEventListener("click", () => {
-    login();
+// Agrego evento "click" formulario plazo fijo
+const buttonPlazoFijo = document.getElementById("buttonPlazoFijo");
+buttonPlazoFijo.addEventListener("click", () => {
+    invertir ();
 });
-
-const buttonRegister = document.getElementById("formButtonRegistro");
-buttonRegister.addEventListener("click", () => {
-    registerNewUser();
-}) 
 
 function invertir () {
     let monto = Number(document.getElementById("capital").value);
