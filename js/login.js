@@ -1,4 +1,4 @@
-// Agrego evento "click" formularios login y register
+// Agrego evento "click" formularios login y register (index.html)
 const buttonLogin = document.getElementById("formButtonIngreso");
 buttonLogin.addEventListener("click", () => {
     login ();
